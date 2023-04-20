@@ -4,6 +4,7 @@
 
 ```
 This week we were tasked with creating a random password generator, from starter code, that satisfied certain criteria. This challenge utilized knowledge we had learned throughout the week on JavaScript, including functions and algorithms, to code this password generator.
+```
 
 ## User Story
 
@@ -31,4 +32,17 @@ WHEN all prompts are answered
 THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
+```
+
+## License
+
+```
+MIT LICENSE
+```
+
+
+## Installation
+
+```
+None
 ```

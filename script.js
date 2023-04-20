@@ -20,7 +20,7 @@ function generatePassword() {
     var l_password = '';
     var isValidPassword = false;
 
-    // Prompt length of password input (between 8-128 characters)
+    // prompt length of password input (between 8-128 characters)
     var numOfChars = prompt("Please choose the length of the password.\n(8-128 characters)");
 
     if (numOfChars != null) {
@@ -40,8 +40,8 @@ function generatePassword() {
         {
             isIncluded: confirm("Click OK if the password includes uppercase characters."),
             charString: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-            // isFulfilled property is used to store the result when validating the generated password
             isFulfilled: false
+            // isFulfilled property stores the result when validating the generated password
         },
         {
             isIncluded: confirm("Click OK if the password includes lowercase characters."),
@@ -66,7 +66,7 @@ function generatePassword() {
         return l_password;
     }
 
-    // Concat the strings of all included character types. 
+    // concatenate the strings of all included character types. 
     for (var i = 0; i < charTypes.length; i++) {
         if (charTypes[i].isIncluded) validChars = validChars + charTypes[i].charString;
     };
@@ -94,15 +94,15 @@ function generatePassword() {
             }
         };
 
-        /* if the generated password cannot fulfill all the required character types, 
-        set isValidPassword to false to let the program to generate a password again 
-        until all the character types can be fulfilled.*/
+        /* if the generated password does not satisfy all the required char types, set isValidPassword to false so that it generates a new password that satisfies all conditions*/
         isValidPassword = charTypes[0].isFulfilled && charTypes[1].isFulfilled &&
             charTypes[2].isFulfilled && charTypes[3].isFulfilled;
     }
 
     return l_password;
 }
+
+
 //   GIVEN I need a new, secure password
 // WHEN I click the button to generate a password
 // THEN I am presented with a series of prompts for password criteria
